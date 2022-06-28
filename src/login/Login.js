@@ -14,12 +14,11 @@ const Login = () => {
     const [logins, setLogins] = useState(defaultLogins)
     const { email, password } = logins
 
-    const { currentUser, setCurrentUser } = useContext(userDetailContext)
+    const { currentUser } = useContext(userDetailContext)
 
     const logGoogleUser = async () => {
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
-        setCurrentUser(user)
+        await signInWithGooglePopup();
+        
     }
 
     const handleChange = (event) => {
@@ -34,7 +33,7 @@ const Login = () => {
         event.preventDefault();
         try {
             const { user } = await signInWithAuthEmailAndPassword(email, password)
-            setCurrentUser(user);
+
         } catch (error) {
             switch (error.code) {
                 case 'auth/wrong-password':

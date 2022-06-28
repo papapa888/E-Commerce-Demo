@@ -1,16 +1,17 @@
-import { useContext, Fragment } from 'react'
-import { Outlet, Link } from 'react-router-dom'
-import { userDetailContext } from '../../contexts/UserContext.js'
+import { Fragment, useContext } from 'react'
+import { Link, Outlet } from 'react-router-dom'
 import { ReactComponent as CrwnLogo } from '../../assets/cdnlogo.com_travis-ci-monochrome.svg'
+import { userDetailContext } from '../../contexts/UserContext.js'
 import { signOutUser } from '../../utils/firebase/firebase.js'
 import './navbar.styles.scss'
 
 
 const NavBar = () => {
-  const { currentUser, setCurrentUser } = useContext(userDetailContext)
+  const { currentUser } = useContext(userDetailContext);
+
   const handleSignOut = async () => {
     await signOutUser();
-    setCurrentUser(null)
+    
   }
   return (
     <Fragment>
