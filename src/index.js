@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import UserContext from './contexts/UserContext';
+import { ProductContext } from './contexts/ProductContext';
 import './index.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,7 +11,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserContext>
-        <App />
+        <ProductContext>
+          <App />
+        </ProductContext>
       </UserContext>
     </BrowserRouter>
   </React.StrictMode>

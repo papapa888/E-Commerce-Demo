@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './routes/home/Home';
 import NavBar from './routes/navigation/NavBar';
 import SignIn from './routes/sign-in/SignIn';
+import Shop from './routes/shop/Shop';
 
 const App = () => {
   return (
@@ -15,12 +16,6 @@ const App = () => {
   )
 }
 
-const Shop = ()=>{
-  return (
-    <div>
-      <h1>Shopping Page</h1>
-    </div>
-  )
-}
+
 
 export default App
