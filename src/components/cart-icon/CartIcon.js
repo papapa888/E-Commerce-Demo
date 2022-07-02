@@ -5,13 +5,13 @@ import './cart-icon.styles.scss'
 
 
 const CartIcon = () => {
-    const { isShow, setIsShow } = useContext(DropDownContext)
+    const { isShow, setIsShow ,totalQuantity} = useContext(DropDownContext)
 
     return (
         <div className='cart-icon-container' onClick={() => { setIsShow(!isShow) }}>
             <ShoppingIcon className='shopping-cart' />
             <span className='item-count'>
-                0
+                {totalQuantity}
             </span>
         </div>
     )
