@@ -10,10 +10,10 @@
   top: 90px;
   right: 40px;
   z-index: 5;
-  
+
   ::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
-    }
+  }
   .cart-items {
     height: 240px;
     display: flex;
@@ -26,5 +26,3 @@
     white-space: nowrap;
   }
 }
-
-
