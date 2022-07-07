@@ -77,7 +77,7 @@ const SignUp = () => {
                 value={confirmPassword} 
                 onChange={handleChange} />
 
-                <Button children="Sign up" />
+                <Button  children="Sign up" />
             </form>
         </div>
     )

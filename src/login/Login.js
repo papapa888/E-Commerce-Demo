@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { signInWithGooglePopup, createUserDocumentFromAuth, signInWithAuthEmailAndPassword, signOutUser } from '../utils/firebase/firebase.js'
 import { userDetailContext } from '../contexts/UserContext.js'
-import Button from '../components/button/button-conponent.js'
+import Button,{BUTTON_TYPE_CLASSES} from '../components/button/button-conponent.js'
 import FormInput from '../components/form-input/FormInput.js'
 
 
@@ -72,7 +72,7 @@ const Login = () => {
                 <div className='buttons-container'>
                     {currentUser == null ? <Button type="submit" children={"Log in"}></Button> :
                         <Button type="submit" onClick={signOutUser} children={"Log out"}></Button>}
-                    <Button type="button" onClick={logGoogleUser} children="Google Sign in" buttonType='google' />
+                    <Button type="button" onClick={logGoogleUser} children="Google Sign in" buttonType={BUTTON_TYPE_CLASSES.google} />
                 </div>
             </form>
         </div>
